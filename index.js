@@ -11,3 +11,8 @@ function findMatching(drivers, name) {
       return driverBeginning.slice(0, nameLength) === firstLetters;
     });
   }
+  function matchName(drivers, nameProperty) {
+    return drivers.filter(function (guess) {
+      return guess.name === nameProperty;
+    })
+  }
