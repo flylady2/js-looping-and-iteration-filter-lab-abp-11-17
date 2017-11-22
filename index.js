@@ -5,8 +5,9 @@ function findMatching(drivers, name) {
     return driverName.toLowerCase() === name.toLowerCase();
   });
   }
-  function findMatching(drivers, name) {
-    return drivers.filter(function (firstLetter) {
-      return firstLetter[0] === name[0];
+  function findMatching(drivers, firstLetters) {
+    let nameLength = firstLetters.length;
+    return drivers.filter(function (driverBeginning) {
+      return driverBeginning.slice(0, nameLength) === firstLetters;
     });
   }
